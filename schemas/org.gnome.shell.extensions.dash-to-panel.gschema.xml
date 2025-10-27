@@ -1,75 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="gnome-shell-extensions">
   <enum id='org.gnome.shell.extensions.dash-to-panel.appiconStyle'>
-    <value value='0' nick='NORMAL'/>
-    <value value='1' nick='SYMBOLIC'/>
-    <value value='2' nick='GRAYSCALE'/>
+    <value value='0' nick='NORMAL' />
+    <value value='1' nick='SYMBOLIC' />
+    <value value='2' nick='GRAYSCALE' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.dotStyle'>
-    <value value='0' nick='DOTS'/>
-    <value value='1' nick='SQUARES'/>
-    <value value='2' nick='DASHES'/>
-    <value value='3' nick='SEGMENTED'/>
-    <value value='4' nick='SOLID'/>
-    <value value='5' nick='CILIORA'/>
-    <value value='6' nick='METRO'/>
+    <value value='0' nick='DOTS' />
+    <value value='1' nick='SQUARES' />
+    <value value='2' nick='DASHES' />
+    <value value='3' nick='SEGMENTED' />
+    <value value='4' nick='SOLID' />
+    <value value='5' nick='CILIORA' />
+    <value value='6' nick='METRO' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.clickAction'>
-    <value value='0' nick='RAISE'/>
-    <value value='1' nick='MINIMIZE'/>
-    <value value='2' nick='LAUNCH'/>
-    <value value='3' nick='CYCLE'/>
-    <value value='4' nick='CYCLE-MIN'/>
-    <value value='5' nick='QUIT'/>
-    <value value='6' nick='TOGGLE-SHOWPREVIEW'/>
-    <value value='7' nick='TOGGLE-CYCLE'/>
-    <value value='8' nick='TOGGLE-SPREAD'/>
+    <value value='0' nick='RAISE' />
+    <value value='1' nick='MINIMIZE' />
+    <value value='2' nick='LAUNCH' />
+    <value value='3' nick='CYCLE' />
+    <value value='4' nick='CYCLE-MIN' />
+    <value value='5' nick='QUIT' />
+    <value value='6' nick='TOGGLE-SHOWPREVIEW' />
+    <value value='7' nick='TOGGLE-CYCLE' />
+    <value value='8' nick='TOGGLE-SPREAD' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.scrollAction'>
-    <value value='0' nick='NOTHING'/>
-    <value value='1' nick='SWITCH_WORKSPACE'/>
-    <value value='2' nick='CYCLE_WINDOWS'/>
-    <value value='3' nick='PASS_THROUGH'/>
-    <value value='4' nick='CHANGE_VOLUME'/>
+    <value value='0' nick='NOTHING' />
+    <value value='1' nick='SWITCH_WORKSPACE' />
+    <value value='2' nick='CYCLE_WINDOWS' />
+    <value value='3' nick='PASS_THROUGH' />
+    <value value='4' nick='CHANGE_VOLUME' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.hotkeyPrefix'>
-    <value value='0' nick='Super'/>
-    <value value='1' nick='SuperAlt'/>
+    <value value='0' nick='Super' />
+    <value value='1' nick='SuperAlt' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.hotkeyOverlay'>
-    <value value='0' nick='NEVER'/>
-    <value value='1' nick='TEMPORARILY'/>
-    <value value='2' nick='ALWAYS'/>
+    <value value='0' nick='NEVER' />
+    <value value='1' nick='TEMPORARILY' />
+    <value value='2' nick='ALWAYS' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.position'>
-    <value value='0' nick='BOTTOM'/>
-    <value value='1' nick='TOP'/>
-    <value value='2' nick='LEFT'/>
-    <value value='3' nick='RIGHT'/>
+    <value value='0' nick='BOTTOM' />
+    <value value='1' nick='TOP' />
+    <value value='2' nick='LEFT' />
+    <value value='3' nick='RIGHT' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.proximityBehavior'>
-    <value value='0' nick='ALL_WINDOWS'/>
-    <value value='1' nick='FOCUSED_WINDOWS'/>
-    <value value='2' nick='MAXIMIZED_WINDOWS'/>
+    <value value='0' nick='ALL_WINDOWS' />
+    <value value='1' nick='FOCUSED_WINDOWS' />
+    <value value='2' nick='MAXIMIZED_WINDOWS' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.fontWeight'>
-    <value value='0' nick='inherit'/>
-    <value value='1' nick='normal'/>
-    <value value='2' nick='lighter'/>
-    <value value='3' nick='bold'/>
-    <value value='4' nick='bolder'/>
+    <value value='0' nick='inherit' />
+    <value value='1' nick='normal' />
+    <value value='2' nick='lighter' />
+    <value value='3' nick='bold' />
+    <value value='4' nick='bolder' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.hotkeyNumberKeys'>
-    <value value='0' nick='NUM_ROW'/>
-    <value value='1' nick='NUM_KEYPAD'/>
-    <value value='2' nick='BOTH'/>
+    <value value='0' nick='NUM_ROW' />
+    <value value='1' nick='NUM_KEYPAD' />
+    <value value='2' nick='BOTH' />
   </enum>
   <enum id='org.gnome.shell.extensions.dash-to-panel.appIconHoverAnimationType'>
-    <value value='0' nick='SIMPLE'/>
-    <value value='1' nick='RIPPLE'/>
-    <value value='2' nick='PLANK'/>
+    <value value='0' nick='SIMPLE' />
+    <value value='1' nick='RIPPLE' />
+    <value value='2' nick='PLANK' />
   </enum>
-  <schema path="/org/gnome/shell/extensions/dash-to-panel/" id="org.gnome.shell.extensions.dash-to-panel">
+  <schema path="/org/gnome/shell/extensions/dash-to-panel/"
+    id="org.gnome.shell.extensions.dash-to-panel">
     <key name="panel-position" enum="org.gnome.shell.extensions.dash-to-panel.position">
       <default>'BOTTOM'</default>
       <summary>Panel position (Deprecated)</summary>
@@ -138,7 +139,8 @@
     <key name="dot-style-unfocused" enum="org.gnome.shell.extensions.dash-to-panel.dotStyle">
       <default>'METRO'</default>
       <summary>Style of the running indicator (unfocused)</summary>
-      <description>Style of the running indicator for the icon for applications which are not currently focused</description>
+      <description>Style of the running indicator for the icon for applications which are not
+        currently focused</description>
     </key>
     <key type="b" name="dot-color-dominant">
       <default>false</default>
@@ -153,22 +155,26 @@
     <key type="s" name="dot-color-1">
       <default>"#5294e2"</default>
       <summary>Color of running indicator (1 window)</summary>
-      <description>Customize the color of the running indicator when one window is running for that application</description>
+      <description>Customize the color of the running indicator when one window is running for that
+        application</description>
     </key>
     <key type="s" name="dot-color-2">
       <default>"#5294e2"</default>
       <summary>Color of running indicator (2 windows)</summary>
-      <description>Customize the color of the running indicator when two windows are running for that application</description>
+      <description>Customize the color of the running indicator when two windows are running for
+        that application</description>
     </key>
     <key type="s" name="dot-color-3">
       <default>"#5294e2"</default>
       <summary>Color of running indicator (3 windows)</summary>
-      <description>Customize the color of the running indicator when three windows are running for that application</description>
+      <description>Customize the color of the running indicator when three windows are running for
+        that application</description>
     </key>
     <key type="s" name="dot-color-4">
       <default>"#5294e2"</default>
       <summary>Color of running indicator (4+ windows)</summary>
-      <description>Customize the color of the running indicator when four or more windows are running for that application</description>
+      <description>Customize the color of the running indicator when four or more windows are
+        running for that application</description>
     </key>
     <key type="b" name="dot-color-unfocused-different">
       <default>false</default>
@@ -178,22 +184,26 @@
     <key type="s" name="dot-color-unfocused-1">
       <default>"#5294e2"</default>
       <summary>Color of unfocused running indicator (1 window)</summary>
-      <description>Customize the color of the unfocused running indicator when one window is running for that application</description>
+      <description>Customize the color of the unfocused running indicator when one window is running
+        for that application</description>
     </key>
     <key type="s" name="dot-color-unfocused-2">
       <default>"#5294e2"</default>
       <summary>Color of unfocused running indicator (2 windows)</summary>
-      <description>Customize the color of the unfocused running indicator when two windows are running for that application</description>
+      <description>Customize the color of the unfocused running indicator when two windows are
+        running for that application</description>
     </key>
     <key type="s" name="dot-color-unfocused-3">
       <default>"#5294e2"</default>
       <summary>Color of unfocused running indicator (3 windows)</summary>
-      <description>Customize the color of the unfocused running indicator when three windows are running for that application</description>
+      <description>Customize the color of the unfocused running indicator when three windows are
+        running for that application</description>
     </key>
     <key type="s" name="dot-color-unfocused-4">
       <default>"#5294e2"</default>
       <summary>Color of unfocused running indicator (4+ windows)</summary>
-      <description>Customize the color of the unfocused running indicator when four or more windows are running for that application</description>
+      <description>Customize the color of the unfocused running indicator when four or more windows
+        are running for that application</description>
     </key>
     <key type="i" name="dot-size">
       <default>3</default>
@@ -246,20 +256,20 @@
       <description>Specifies if the user can modify the taskbar</description>
     </key>
     <key type="i" name="panel-top-bottom-margins">
-        <default>0</default>
-        <summary>Panel top and bottom margins</summary>
+      <default>0</default>
+      <summary>Panel top and bottom margins</summary>
     </key>
     <key type="i" name="panel-side-margins">
-        <default>0</default>
-        <summary>Panel side margins</summary>
+      <default>0</default>
+      <summary>Panel side margins</summary>
     </key>
-      <key type="i" name="panel-top-bottom-padding">
-        <default>0</default>
-        <summary>Panel top and bottom padding</summary>
+    <key type="i" name="panel-top-bottom-padding">
+      <default>0</default>
+      <summary>Panel top and bottom padding</summary>
     </key>
     <key type="i" name="panel-side-padding">
-        <default>0</default>
-        <summary>Panel sides padding</summary>
+      <default>0</default>
+      <summary>Panel sides padding</summary>
     </key>
     <key type="b" name="trans-use-custom-bg">
       <default>false</default>
@@ -286,7 +296,8 @@
       <summary>Panel opacity</summary>
       <description>Custom opacity for the panel</description>
     </key>
-    <key name="trans-dynamic-behavior" enum="org.gnome.shell.extensions.dash-to-panel.proximityBehavior">
+    <key name="trans-dynamic-behavior"
+      enum="org.gnome.shell.extensions.dash-to-panel.proximityBehavior">
       <default>'ALL_WINDOWS'</default>
       <summary>Dynamic opacity behavior</summary>
       <description>Dictates which window type affects the panel opacity</description>
@@ -365,7 +376,8 @@
       <default>false</default>
       <summary>Only hide from windows on monitor</summary>
     </key>
-    <key name="intellihide-behaviour" enum="org.gnome.shell.extensions.dash-to-panel.proximityBehavior">
+    <key name="intellihide-behaviour"
+      enum="org.gnome.shell.extensions.dash-to-panel.proximityBehavior">
       <default>'FOCUSED_WINDOWS'</default>
       <summary>Intellihide behaviour</summary>
       <description>Dictates how to intelligently hide the panel</description>
@@ -400,7 +412,8 @@
     <key type="i" name="intellihide-pressure-time">
       <default>1000</default>
       <summary>Intellihide pressure time</summary>
-      <description>The numer of milliseconds that the pressure needs to be applied to reveal the panel</description>
+      <description>The numer of milliseconds that the pressure needs to be applied to reveal the
+        panel</description>
     </key>
     <key type="b" name="intellihide-show-in-fullscreen">
       <default>false</default>
@@ -463,27 +476,28 @@
     <key type="b" name="show-apps-override-escape">
       <default>true</default>
       <summary>Override escape key</summary>
-      <description>Override the escape key to return to the desktop when entering the overview using the Show Applications button</description>
+      <description>Override the escape key to return to the desktop when entering the overview using
+        the Show Applications button</description>
     </key>
     <key type="as" name="show-apps-button-context-menu-commands">
-     <default>[]</default>
-     <summary>Show Apps button context menu commands</summary>
-     <description>Commands to add to the Show Apps button right click menu</description>
+      <default>[]</default>
+      <summary>Show Apps button context menu commands</summary>
+      <description>Commands to add to the Show Apps button right click menu</description>
     </key>
     <key type="as" name="show-apps-button-context-menu-titles">
-     <default>[]</default>
-     <summary>Show Apps button context menu titles</summary>
-     <description>Titles for commands added to Show Apps button right click menu</description>
+      <default>[]</default>
+      <summary>Show Apps button context menu titles</summary>
+      <description>Titles for commands added to Show Apps button right click menu</description>
     </key>
     <key type="as" name="panel-context-menu-commands">
-     <default>[]</default>
-     <summary>Panel context menu commands</summary>
-     <description>Commands to add to the panel right click menu</description>
+      <default>[]</default>
+      <summary>Panel context menu commands</summary>
+      <description>Commands to add to the panel right click menu</description>
     </key>
     <key type="as" name="panel-context-menu-titles">
-     <default>[]</default>
-     <summary>Panel context menu titles</summary>
-     <description>Titles for commands added to panel right click menu</description>
+      <default>[]</default>
+      <summary>Panel context menu titles</summary>
+      <description>Titles for commands added to panel right click menu</description>
     </key>
     <key type="b" name="show-activities-button">
       <default>false</default>
@@ -533,7 +547,8 @@
     <key type="i" name="show-window-previews-timeout">
       <default>400</default>
       <summary>Icon enter display time</summary>
-      <description>Amount of time after entering icon to wait before displaying window preview if icon is not clicked or mouse has not left.</description>
+      <description>Amount of time after entering icon to wait before displaying window preview if
+        icon is not clicked or mouse has not left.</description>
     </key>
     <key type="b" name="peek-mode">
       <default>true</default>
@@ -550,7 +565,8 @@
       <summary>Window previews manual styling</summary>
       <description>This defines if the default window previews styling should be applied</description>
     </key>
-    <key name="window-preview-title-position" enum="org.gnome.shell.extensions.dash-to-panel.position">
+    <key name="window-preview-title-position"
+      enum="org.gnome.shell.extensions.dash-to-panel.position">
       <default>'TOP'</default>
       <summary>Title position</summary>
       <description>Position of the window title, close button and icon in preview.</description>
@@ -580,10 +596,12 @@
       <summary>Window previews animation time</summary>
       <description>This defines the window previews animation time.</description>
     </key>
-    <key name="window-preview-title-font-weight" enum="org.gnome.shell.extensions.dash-to-panel.fontWeight">
+    <key name="window-preview-title-font-weight"
+      enum="org.gnome.shell.extensions.dash-to-panel.fontWeight">
       <default>'inherit'</default>
       <summary>Font weight of window preview titles</summary>
-      <description>This defines the font weight of window preview titles. Supported values: inherit (from theme), normal, lighter, bold and bolder.</description>
+      <description>This defines the font weight of window preview titles. Supported values: inherit
+        (from theme), normal, lighter, bold and bolder.</description>
     </key>
     <key type="i" name="window-preview-size">
       <default>240</default>
@@ -625,7 +643,7 @@
       <summary>Provide workspace isolation</summary>
       <description>Dash shows only windows from the current workspace</description>
     </key>
-     <key type="b" name="overview-click-to-exit">
+    <key type="b" name="overview-click-to-exit">
       <default>false</default>
       <summary>Close overview by clicking in empty space</summary>
       <description>Close overview or app grid by clicking in empty space</description>
@@ -643,42 +661,51 @@
     <key type="i" name="group-apps-label-font-size">
       <default>14</default>
       <summary>Application title font size</summary>
-      <description>When the applications are ungrouped, this defines the application titles font size.</description>
+      <description>When the applications are ungrouped, this defines the application titles font
+        size.</description>
     </key>
-    <key name="group-apps-label-font-weight" enum="org.gnome.shell.extensions.dash-to-panel.fontWeight">
+    <key name="group-apps-label-font-weight"
+      enum="org.gnome.shell.extensions.dash-to-panel.fontWeight">
       <default>'inherit'</default>
       <summary>Font weight of application titles</summary>
-      <description>When the applications are ungrouped, this defines font weight of application titles. Supported values: inherit (from theme), normal, lighter, bold and bolder.</description>
+      <description>When the applications are ungrouped, this defines font weight of application
+        titles. Supported values: inherit (from theme), normal, lighter, bold and bolder.</description>
     </key>
     <key type="s" name="group-apps-label-font-color">
       <default>"#dddddd"</default>
       <summary>Application title font color</summary>
-      <description>When the applications are ungrouped, this defines the application titles font color.</description>
+      <description>When the applications are ungrouped, this defines the application titles font
+        color.</description>
     </key>
     <key type="s" name="group-apps-label-font-color-minimized">
       <default>"#dddddd"</default>
       <summary>Minimized application title font color</summary>
-      <description>When the applications are ungrouped, this defines the titles font color for minimized applications.</description>
+      <description>When the applications are ungrouped, this defines the titles font color for
+        minimized applications.</description>
     </key>
     <key type="i" name="group-apps-label-max-width">
       <default>160</default>
       <summary>Application title max width</summary>
-      <description>When the applications are ungrouped, this defines the application titles maximum width.</description>
+      <description>When the applications are ungrouped, this defines the application titles maximum
+        width.</description>
     </key>
     <key type="b" name="group-apps-use-fixed-width">
       <default>true</default>
       <summary>Use a fixed width for the application titles</summary>
-      <description>The application titles all have the same width, even if their texts are shorter than the maximum width. The maximum width value is used as the fixed width.</description>
+      <description>The application titles all have the same width, even if their texts are shorter
+        than the maximum width. The maximum width value is used as the fixed width.</description>
     </key>
     <key type="b" name="group-apps-underline-unfocused">
       <default>true</default>
       <summary>Display running indicators on unfocused applications</summary>
-      <description>When the applications are ungrouped, this defines if running applications should display an indicator.</description>
+      <description>When the applications are ungrouped, this defines if running applications should
+        display an indicator.</description>
     </key>
     <key type="b" name="group-apps-use-launchers">
       <default>false</default>
       <summary>Use favorite icons as application launchers</summary>
-      <description>When the applications are ungrouped, this defines if running applications stay separate from the favorite icons.</description>
+      <description>When the applications are ungrouped, this defines if running applications stay
+        separate from the favorite icons.</description>
     </key>
     <key type="s" name="primary-monitor">
       <default>''</default>
@@ -702,7 +729,8 @@
     <key type="b" name="show-favorites-all-monitors">
       <default>true</default>
       <summary>Display the favorites on all monitors</summary>
-      <description>Specifies if every panel should display the favorite applications. If false, the favorite appplications are only displayed on the primary monitor.</description>
+      <description>Specifies if every panel should display the favorite applications. If false, the
+        favorite appplications are only displayed on the primary monitor.</description>
     </key>
     <key type="b" name="customize-click">
       <default>true</default>
@@ -720,22 +748,27 @@
     <key name="click-action" enum="org.gnome.shell.extensions.dash-to-panel.clickAction">
       <default>'CYCLE-MIN'</default>
       <summary>Action when clicking on a running app</summary>
-      <description>Set the action that is executed when clicking on the icon of a running application</description>
+      <description>Set the action that is executed when clicking on the icon of a running
+        application</description>
     </key>
     <key name="shift-click-action" enum="org.gnome.shell.extensions.dash-to-panel.clickAction">
       <default>'MINIMIZE'</default>
       <summary>Action when shift+clicking on a running app</summary>
-      <description>Set the action that is executed when shift+clicking on the icon of a running application</description>
+      <description>Set the action that is executed when shift+clicking on the icon of a running
+        application</description>
     </key>
     <key name="middle-click-action" enum="org.gnome.shell.extensions.dash-to-panel.clickAction">
       <default>'LAUNCH'</default>
       <summary>Action when clicking on a running app</summary>
-      <description>Set the action that is executed when middle-clicking on the icon of a running application</description>
+      <description>Set the action that is executed when middle-clicking on the icon of a running
+        application</description>
     </key>
-    <key name="shift-middle-click-action" enum="org.gnome.shell.extensions.dash-to-panel.clickAction">
+    <key name="shift-middle-click-action"
+      enum="org.gnome.shell.extensions.dash-to-panel.clickAction">
       <default>'LAUNCH'</default>
       <summary>Action when clicking on a running app</summary>
-      <description>Set the action that is executed when shift+middle-clicking on the icon of a running application</description>
+      <description>Set the action that is executed when shift+middle-clicking on the icon of a
+        running application</description>
     </key>
     <key name="scroll-panel-action" enum="org.gnome.shell.extensions.dash-to-panel.scrollAction">
       <default>'SWITCH_WORKSPACE'</default>
@@ -745,22 +778,22 @@
     <key type="s" name="context-menu-entries">
       <default>'
         [
-          {
-            "title": "Terminal",
-            "cmd": "TERMINALSETTINGS"
-          },
-          {
-            "title": "System monitor",
-            "cmd": "gnome-system-monitor"
-          },
-          {
-            "title": "Files",
-            "cmd": "nautilus"
-          },
-          {
-            "title": "Extensions",
-            "cmd": "gnome-extensions-app"
-          }
+        {
+        "title": "Terminal",
+        "cmd": "TERMINALSETTINGS"
+        },
+        {
+        "title": "System monitor",
+        "cmd": "gnome-system-monitor"
+        },
+        {
+        "title": "Files",
+        "cmd": "nautilus"
+        },
+        {
+        "title": "Extensions",
+        "cmd": "gnome-extensions-app"
+        }
         ]'
       </default>
       <summary>User defined context menu entries</summary>
@@ -787,12 +820,14 @@
     <key type="i" name="leave-timeout">
       <default>100</default>
       <summary>Icon leave preview timeout</summary>
-      <description>Amount of time to leave preview windows open when the mouse has left the application's icon.</description>
+      <description>Amount of time to leave preview windows open when the mouse has left the
+        application's icon.</description>
     </key>
     <key type="i" name="enter-peek-mode-timeout">
       <default>500</default>
       <summary>Enter window peeking mode timeout</summary>
-      <description>Amount of time of inactivity to enter the window peeking mode when the mouse has entered a window preview.</description>
+      <description>Amount of time of inactivity to enter the window peeking mode when the mouse has
+        entered a window preview.</description>
     </key>
     <key type="i" name="peek-mode-opacity">
       <default>40</default>
@@ -820,38 +855,50 @@
       <description>Set the size of the tray font. (0 for default)</description>
     </key>
     <key type="i" name="leftbox-size">
-        <default>0</default>
-        <summary>Leftbox font size</summary>
-        <description>Set the size of the leftBox font. (0 for default)</description>
+      <default>0</default>
+      <summary>Leftbox font size</summary>
+      <description>Set the size of the leftBox font. (0 for default)</description>
     </key>
     <key type="i" name="global-border-radius">
-        <default>0</default>
-        <summary>Border radius of panel elements</summary>
+      <default>0</default>
+      <summary>Border radius of panel elements</summary>
     </key>
     <key type="i" name="appicon-margin">
-        <default>8</default>
-        <summary>App icon margin</summary>
-        <description>Set the margin for application icons in the embedded dash.</description>
+      <default>8</default>
+      <summary>App icon margin</summary>
+      <description>Set the margin for application icons in the embedded dash.</description>
     </key>
     <key type="i" name="appicon-padding">
-        <default>4</default>
-        <summary>App icon padding</summary>
-        <description>Set the padding for application icons in the embedded dash.</description>
+      <default>4</default>
+      <summary>App icon padding</summary>
+      <description>Set the padding for application icons in the embedded dash.</description>
     </key>
     <key type="i" name="tray-padding">
-        <default>-1</default>
-        <summary>Tray item padding</summary>
-        <description>Set the size of the tray padding. (-1 for default)</description>
+      <default>-1</default>
+      <summary>Tray item padding</summary>
+      <description>Set the size of the tray padding. (-1 for default)</description>
     </key>
     <key type="i" name="leftbox-padding">
-        <default>-1</default>
-        <summary>Leftbox item padding</summary>
-        <description>Set the size of the leftBox padding. (-1 for default)</description>
+      <default>-1</default>
+      <summary>Leftbox item padding</summary>
+      <description>Set the size of the leftBox padding. (-1 for default)</description>
     </key>
     <key type="i" name="status-icon-padding">
-        <default>-1</default>
-        <summary>Status icon padding</summary>
-        <description>Set the size of the aggregate (status) menu icon padding. (-1 for default)</description>
+      <default>-1</default>
+      <summary>Status icon padding</summary>
+      <description>Set the size of the aggregate (status) menu icon padding. (-1 for default)</description>
+    </key>
+    <key type="i" name="gap-app-tray">
+      <default>0</default>
+      <summary>Gap between application area and tray</summary>
+      <description>Extra spacing (in pixels) inserted between the application icons area (taskbar)
+        and the tray/status area.</description>
+    </key>
+    <key type="i" name="gap-tray-status">
+      <default>0</default>
+      <summary>Gap between tray and status icons</summary>
+      <description>Extra spacing (in pixels) inserted between the tray area and the status icons
+        (system menu/date menu).</description>
     </key>
     <key type="b" name="animate-app-switch">
       <default>true</default>
@@ -865,13 +912,15 @@
       <default>false</default>
       <summary>Animate app icon on hover</summary>
     </key>
-    <key name="animate-appicon-hover-animation-type" enum="org.gnome.shell.extensions.dash-to-panel.appIconHoverAnimationType">
+    <key name="animate-appicon-hover-animation-type"
+      enum="org.gnome.shell.extensions.dash-to-panel.appIconHoverAnimationType">
       <default>'SIMPLE'</default>
       <summary>App icon hover animation type</summary>
     </key>
     <key type="a{sd}" name="animate-appicon-hover-animation-convexity">
       <default>{'RIPPLE':2,'PLANK':1}</default>
-      <summary>App icon hover animation curve convexity (1 is linear, more is convex, less is concave)</summary>
+      <summary>App icon hover animation curve convexity (1 is linear, more is convex, less is
+        concave)</summary>
     </key>
     <key type="a{su}" name="animate-appicon-hover-animation-duration">
       <default>{'SIMPLE':160,'RIPPLE':130,'PLANK':100}</default>
@@ -958,7 +1007,8 @@
     <key type="b" name="shortcut-previews">
       <default>false</default>
       <summary>Show window previews</summary>
-      <description>When multiple instances of the application are available, show their window previews</description>
+      <description>When multiple instances of the application are available, show their window
+        previews</description>
     </key>
     <key name="shortcut-num-keys" enum="org.gnome.shell.extensions.dash-to-panel.hotkeyNumberKeys">
       <default>'BOTH'</default>
@@ -1385,7 +1435,7 @@
         Keybinding to either show or launch the 10th application in the dash.
       </description>
     </key>
-     <key type="b" name="progress-show-bar">
+    <key type="b" name="progress-show-bar">
       <default>true</default>
       <summary>Show progress bar on app icon</summary>
       <description>Whether to show progress bar overlay on app icon, for supported applications.</description>

@@ -21,8 +21,8 @@
  * mathematical.coffee@gmail.com
  */
 
-import * as Utils from './utils.js'
 import { SETTINGS } from './extension.js'
+import * as Utils from './utils.js'
 
 export const PanelStyle = class {
   enable(panel) {
@@ -48,6 +48,8 @@ export const PanelStyle = class {
       'tray-padding',
       'leftbox-padding',
       'status-icon-padding',
+      'gap-app-tray',
+      'gap-tray-status',
     ]
 
     this._dtpSettingsSignalIds = []
@@ -122,6 +124,41 @@ export const PanelStyle = class {
         this._overrideStyle(actor, statusIconPaddingStyleLine, operationIdx)
       }
       this._rightBoxOperations.push(operation)
+    }
+
+    let appTrayGap = SETTINGS.get_int('gap-app-tray')
+    if (appTrayGap && appTrayGap > 0) {
+      let gapStyleLine = isVertical
+        ? 'margin-top: %dpx'.format(appTrayGap)
+        : 'margin-left: %dpx'.format(appTrayGap)
+
+      try {
+        this._overrideStyle(this.panel._rightBox, gapStyleLine, 100)
+      } catch (e) {
+        log('dash-to-panel: failed to apply app-tray gap style: ' + e)
+      }
+    }
+
+    let trayStatusGap = SETTINGS.get_int('gap-tray-status')
+    if (trayStatusGap && trayStatusGap > 0) {
+      let gapStyleLine = isVertical
+        ? 'margin-top: %dpx'.format(trayStatusGap)
+        : 'margin-left: %dpx'.format(trayStatusGap)
+
+      try {
+        let systemMenuName = Utils.getSystemMenuInfo().name
+        if (this.panel.statusArea.dateMenu) {
+          this._overrideStyle(
+            this.panel.statusArea.dateMenu.container,
+            gapStyleLine,
+            101,
+          )
+        } else if (this.panel.statusArea[systemMenuName]) {
+          this._overrideStyle(this.panel.statusArea[systemMenuName].container, gapStyleLine, 102)
+        }
+      } catch (e) {
+        log('dash-to-panel: failed to apply tray-status gap style: ' + e)
+      }
     }
 
     let trayContentSize = SETTINGS.get_int('tray-size')
@@ -244,6 +281,17 @@ export const PanelStyle = class {
     this._restoreOriginalStyle(this.panel._rightBox)
     this._restoreOriginalStyle(this.panel._centerBox)
     this._restoreOriginalStyle(this.panel._leftBox)
+
+    // restore any status area container styles we may have overridden
+    try {
+      let systemMenuName = Utils.getSystemMenuInfo().name
+      if (this.panel.statusArea && this.panel.statusArea[systemMenuName])
+        this._restoreOriginalStyle(this.panel.statusArea[systemMenuName].container)
+      if (this.panel.statusArea && this.panel.statusArea.dateMenu)
+        this._restoreOriginalStyle(this.panel.statusArea.dateMenu.container)
+    } catch (e) {
+      log('dash-to-panel: error restoring status area original styles: ' + e)
+    }
 
     this._applyStylesRecursively(true)
   }

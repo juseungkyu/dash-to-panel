@@ -1,3 +1,10 @@
+## Post fork modifications
+ - Add interval settings between app, tray, and status
+
+![screenshot](media/additionalDescription/Screenshot from 2025-10-27 13-54-36.png)
+
+![screenshot](media/additionalDescription/Screenshot from 2025-10-27 13-56-17.png)
+
 <p align="left">
   <img src="/media/design/svg/D2P_logo.svg" width="620"/>
 </p>
@@ -15,7 +22,7 @@
 
 ### Introduction
 
-Dash to Panel is an icon taskbar for Gnome Shell. This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to that found in KDE Plasma and Windows 7+. A separate dock is no longer needed for easy access to running and favorited applications. 
+Dash to Panel is an icon taskbar for Gnome Shell. This extension moves the dash into the gnome main panel so that the application launchers and system tray are combined into a single panel, similar to that found in KDE Plasma and Windows 7+. A separate dock is no longer needed for easy access to running and favorited applications.
 
 Beyond that, just about every aspect of the panel is fully customizable. From positioning and scaling panel elements to running indicators to multi-monitor display, to window previews and even intellihide, Dash to Panel has everything you need to make your workspace feel like home.
 
@@ -38,7 +45,7 @@ Beyond that, just about every aspect of the panel is fully customizable. From po
         <tr>
             <td align="center">Metro</td>
             <td align="center">Ciliora/Dashes</td>
-        </tr> 
+        </tr>
         <tr>
             <td align="center"><img src="media/design/png/metro.png"/></td>
             <td align="center"><img src="media/design/png/ciliora-dashes.png"/></td>
@@ -46,7 +53,7 @@ Beyond that, just about every aspect of the panel is fully customizable. From po
         <tr>
             <td align="center">Ciliora</td>
             <td align="center">Squares/Segmented</td>
-        </tr> 
+        </tr>
         <tr>
             <td align="center"><img src="media/design/png/ciliora.png"/></td>
             <td align="center"><img src="media/design/png/squares-segments.png"/></td>
@@ -54,7 +61,7 @@ Beyond that, just about every aspect of the panel is fully customizable. From po
         <tr>
             <td align="center">Dashes</td>
             <td align="center">Dots/Solid</td>
-        </tr> 
+        </tr>
         <tr>
             <td align="center"><img src="media/design/png/dashes.png"/></td>
             <td align="center"><img src="media/design/png/dots-solid.png"/></td>
@@ -105,7 +112,7 @@ Beyond that, just about every aspect of the panel is fully customizable. From po
 
 To install a development version from source, please see the [Installation wiki page](https://github.com/home-sweet-gnome/dash-to-panel/wiki/Installation).
 
-## 
+##
 ### FAQ
 
 How do I customize the panel? [See the Wiki](https://github.com/home-sweet-gnome/dash-to-panel/wiki/Enable-and-Customize#customize-it)
@@ -122,14 +129,14 @@ How do I display Minimize & Maximize buttons? In the Tweak Tool application, tur
 
 How do I reset the extension to its default settings? `dconf reset -f /org/gnome/shell/extensions/dash-to-panel/`.
 
-## 
+##
 ### Themes
 While this extension works well with most popular Gnome Shell themes, the following themes are known to have explicitly added custom styles for this extension:
 - [Ciliora Tertia](https://github.com/zagortenay333/ciliora-tertia-shell) / [Ciliora Secunda](https://github.com/zagortenay333/ciliora-secunda-shell)
 - [Plano](https://github.com/lassekongo83/plano-theme)
 
 
-## 
+##
 ### Compatibility
 
 This extension has been tested with Gnome 3.18+.
@@ -141,7 +148,7 @@ This extension manipulates the Gnome Main Panel, aka Top Bar. So, most other ext
 
 This extension could be even better with your help! Any items in the issue tracker labelled `help wanted` or `good first issue` are up for grabs. For more info, see the [Contributing wiki page](https://github.com/home-sweet-gnome/dash-to-panel/wiki/Contributing).
 
-## 
+##
 ### Credits
 
 This extension is developed and maintained by [@jderose9](https://github.com/jderose9) and [@charlesg99](https://github.com/charlesg99).
@@ -179,17 +186,17 @@ Ideas for recursing child actors and assigning inline styles are based on code f
 - @Hirnmoder for Beautify DTP and panel border
 - @JimBroad for grayscale icons
 
-#### Bug Fixes: 
+#### Bug Fixes:
 @imrvelj, @Teslator, @bil-elmoussaoui, @brandon-schumann, @sw9, @rockon999 , @lexruee, @3v1n0, @freeroot, @moqmar, @ArtyomZorin, @lkc0987, @saibotk, @vanillajonathan, @Zkdc, @leebickmtu, @l3nn4rt, @Melix19, @Aikatsui, @melix99, @kyrillzorin, @oneshadab, @CorvetteCole, @vantu5z, @spectreseven1138, @aperezdc, @smedir, @lucaxvi, @andyholmes, @vowstar, @T99Rots, @City-busz, @guoqiyi, @gcrabbe, @Anduin2017, @xalt7x, @Survolog, @TorosFanny
 
 #### Documentation Improvements:
 @BoQsc, @zakkak, @dandv, @elliotwutingfeng
 
-#### Translations: 
+#### Translations:
 @frnogueira / @victorwpbastos / @vagkaefer / @jotavionm (pt_BR), @zeten30 / @Amereyeu (cs), @franglais125 / @calotam / @oeramirez / @jhonatanseminario / @oscfdezdz (es), @LaurentTreguier / @SolarLiner / @DelphinPETER (fr), @elsieholmes / @xalt7x (uk), @hosiet / @zhmars (zh\_CN), @jonnius / @linuxr01 / @Etamuk / @daPhipz (de), @urbalazs / @pappfer (hu), @crayxt (kk), @pkomur / @MartinPL / @alex4401 / @konradmb / @alewicki95 / @0rzech (pl), @AlexGluck / @GoodNike / @rjapolov / @vantu5z / @Keleth / @code-ascend (ru), @sicklylife-jp / @ryonakano / @nexryai / @Umoxfo (ja), @oltulu / @TeknoMobil / @daenney / @osmancoskun (tr), @sbadux / @kowalski7cc / @l3nn4rt / @albanobattistella (it), @OriginCode / @pan93412 (zh\_TW), @ojn (sv), @frandieguez (gl), @kuroehanako / @MarongHappy (ko), @jose1711 / @dodog (sk), @eshagh79 (fa)
 
 
-## 
+##
 ### License & Terms ![](media/design/png/copyleft-16.png)
 
 Dash to Panel is available under the terms of the GPL-v2 or later license See [`COPYING`](https://github.com/home-sweet-gnome/dash-to-panel/blob/master/COPYING) for details.

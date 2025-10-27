@@ -21,16 +21,16 @@
  */
 
 import Adw from 'gi://Adw'
+import Gdk from 'gi://Gdk'
 import GdkPixbuf from 'gi://GdkPixbuf'
 import Gio from 'gi://Gio'
 import GioUnix from 'gi://GioUnix'
 import GLib from 'gi://GLib'
 import GObject from 'gi://GObject'
 import Gtk from 'gi://Gtk'
-import Gdk from 'gi://Gdk'
 
-import * as PanelSettings from './panelSettings.js'
 import * as Pos from './panelPositions.js'
+import * as PanelSettings from './panelSettings.js'
 
 import {
   ExtensionPreferences,
@@ -1090,13 +1090,13 @@ const Preferences = class {
           'sensitive',
           Gio.SettingsBindFlags.INVERT_BOOLEAN,
         )
-        ;(function () {
-          let rgba = new Gdk.RGBA()
-          rgba.parse(this._settings.get_string('focus-highlight-color'))
-          this._builder
-            .get_object('focus_highlight_color_colorbutton')
-            .set_rgba(rgba)
-        }).apply(this)
+          ; (function () {
+            let rgba = new Gdk.RGBA()
+            rgba.parse(this._settings.get_string('focus-highlight-color'))
+            this._builder
+              .get_object('focus_highlight_color_colorbutton')
+              .set_rgba(rgba)
+          }).apply(this)
 
         this._builder
           .get_object('focus_highlight_opacity_spinbutton')
@@ -1610,7 +1610,7 @@ const Preferences = class {
         .get_object('intellihide_behaviour_options')
         .set_sensitive(
           this._settings.get_boolean('intellihide-hide-from-windows') ||
-            hideFromMonitorWindows,
+          hideFromMonitorWindows,
         )
     }
 
@@ -2549,15 +2549,15 @@ const Preferences = class {
               widget.get_active_id(),
             )
           })
-        ;(function () {
-          let rgba = new Gdk.RGBA()
-          rgba.parse(
-            this._settings.get_string('window-preview-title-font-color'),
-          )
-          this._builder
-            .get_object('grid_preview_title_font_color_colorbutton')
-            .set_rgba(rgba)
-        }).apply(this)
+          ; (function () {
+            let rgba = new Gdk.RGBA()
+            rgba.parse(
+              this._settings.get_string('window-preview-title-font-color'),
+            )
+            this._builder
+              .get_object('grid_preview_title_font_color_colorbutton')
+              .set_rgba(rgba)
+          }).apply(this)
 
         dialog.show()
       })
@@ -2821,22 +2821,22 @@ const Preferences = class {
               widget.get_active_id(),
             )
           })
-        ;(function () {
-          let rgba = new Gdk.RGBA()
-          rgba.parse(this._settings.get_string('group-apps-label-font-color'))
-          this._builder
-            .get_object('group_apps_label_font_color_colorbutton')
-            .set_rgba(rgba)
-        }).apply(this)
-        ;(function () {
-          let rgba = new Gdk.RGBA()
-          rgba.parse(
-            this._settings.get_string('group-apps-label-font-color-minimized'),
-          )
-          this._builder
-            .get_object('group_apps_label_font_color_minimized_colorbutton')
-            .set_rgba(rgba)
-        }).apply(this)
+          ; (function () {
+            let rgba = new Gdk.RGBA()
+            rgba.parse(this._settings.get_string('group-apps-label-font-color'))
+            this._builder
+              .get_object('group_apps_label_font_color_colorbutton')
+              .set_rgba(rgba)
+          }).apply(this)
+          ; (function () {
+            let rgba = new Gdk.RGBA()
+            rgba.parse(
+              this._settings.get_string('group-apps-label-font-color-minimized'),
+            )
+            this._builder
+              .get_object('group_apps_label_font_color_minimized_colorbutton')
+              .set_rgba(rgba)
+          }).apply(this)
 
         this._builder
           .get_object('group_apps_label_max_width_spinbutton')
@@ -3412,6 +3412,18 @@ const Preferences = class {
         valueName: 'highlight-appicon-hover-border-radius',
         range: [16, 12, 8, 4, 2, 0],
       },
+      {
+        objectName: 'gap_app_tray_scale',
+        valueName: 'gap-app-tray',
+        // larger range so users can set bigger pixel gaps (max 128px)
+        range: [128, 64, 32, 16, 0],
+      },
+      {
+        objectName: 'gap_tray_status_scale',
+        valueName: 'gap-tray-status',
+        // larger range so users can set bigger pixel gaps (max 128px)
+        range: [128, 64, 32, 16, 0],
+      },
     ]
 
     let connectValueChanged = (scaleObj, scaleInfo) => {
@@ -3845,7 +3857,7 @@ const Preferences = class {
 
     versionLinkButton.set_label(
       this._metadata.version.toString() +
-        (this._metadata.commit ? ' (' + this._metadata.commit + ')' : ''),
+      (this._metadata.commit ? ' (' + this._metadata.commit + ')' : ''),
     )
     versionLinkButton.set_uri(
       `${this._metadata.url}/${this._metadata.commit ? `commit/${this._metadata.commit}` : `releases/tag/v${this._metadata.version}`}`,
@@ -3899,7 +3911,7 @@ const Preferences = class {
               stdin.splice(
                 settingsFile.read(null),
                 Gio.OutputStreamSpliceFlags.CLOSE_SOURCE |
-                  Gio.OutputStreamSpliceFlags.CLOSE_TARGET,
+                Gio.OutputStreamSpliceFlags.CLOSE_TARGET,
                 null,
               )
             }
