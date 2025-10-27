@@ -1,9 +1,9 @@
 ## Post fork modifications
  - Add interval settings between app, tray, and status
 
-![screenshot](media/additionalDescription/Screenshot from 2025-10-27 13-54-36.png)
+![screenshot](media/additionalDescription/Screenshot1.png)
 
-![screenshot](media/additionalDescription/Screenshot from 2025-10-27 13-56-17.png)
+![screenshot](media/additionalDescription/Screenshot2.png)
 
 <p align="left">
   <img src="/media/design/svg/D2P_logo.svg" width="620"/>
